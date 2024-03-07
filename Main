@@ -1,0 +1,61 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int idade, seguidores;
+  double aumento;
+  char letra;
+  float altura;
+  string nome, especie, perfil, add,  sim = "sim", nao = "não", fav;
+  cout << "Bom dia, você deseja entrar no perfil do seu pokémon?" << endl;
+  cin >> perfil;
+  if (perfil == sim){
+    cout << "Por favor, digite o nome e embaixo a espécie do seu pokémon:" << endl;
+    cin >> nome;
+    cin >> especie;
+    cout << "Ótimo, agora para concluir, diga em que idade seu pokémon está:" << endl;
+    cin >> idade;
+    if (idade > 0 && idade <= 3){
+      cout << "Seu pokémon é um bebê, por favor, aguarde alguns anos para que ele seja adulto." << endl;
+    }
+    if (idade >3 && idade <= 15){
+      cout << "*Perfil do pokémon:*" << endl;
+      cout << "Nome: " << nome << endl;
+      cout << "Espécie: " << especie << endl;
+      cout << "Idade: " << idade << endl;
+      cout << "Você deseja dar o toque final no seu perfil?" << endl;
+      cin >> add;
+      if (add == sim){
+        cout << "Digite a altura, comida e letra favorita de " << nome << ":"  << endl;
+        cin >> altura;
+        cin >> fav;
+        cin >> letra;
+        cout << "Agora o seu perfil está completo!" << endl;
+        cout << "*Perfil do pokémon:*" << endl;
+        cout << "Nome: " << nome << endl;
+        cout << "Espécie: " << especie << endl;
+        cout << "Idade: " << idade << "anos" << endl;
+        cout << "Altura: " << altura << "metros" << endl;
+        cout << "Comida favorita: " << fav << endl;
+        cout << "Letra favorita: " << letra << endl;
+        cout << "Agora qual a sua meta de novos seguidores para daqui 24 horas?" << endl;
+        cin >> seguidores;
+        aumento = seguidores / 24;
+        cout << "Para conseguir alcançar sua meta você precisará de um aumento de  " << aumento << " seguidores por hora."  << endl;
+        
+      }
+      if (add == nao){
+        cout << "Ok!" << endl;
+        cout << "Agora qual a sua meta de novos seguidores para daqui 24 horas?" << endl;
+        cin >> seguidores;
+        aumento = seguidores / 24;
+        cout << "Para conseguir alcançar sua meta você precisará de um aumento de  " << aumento << " seguidores por hora."  << endl;
+        cout << "Boa sorte!!!";
+      }
+    }
+  }
+  if (perfil == nao){
+     cout << "OK, obrigado pela atenção!" << endl;  
+  }
+
+}
